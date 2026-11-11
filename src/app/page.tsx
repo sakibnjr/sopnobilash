@@ -314,22 +314,21 @@ const SafeDeliveryIllustration = () => (
     className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 drop-shadow-xs"
     aria-hidden="true"
   >
-    {/* Soft Badge Background */}
     <rect width="52" height="52" rx="14" fill="#FEF3C7" />
     <circle cx="26" cy="26" r="21" stroke="#FDE68A" strokeWidth="1" strokeDasharray="3 3" />
-    {/* Isometric Delivery Box */}
-    <path d="M14 24L26 17.5L38 24L26 30.5L14 24Z" fill="#FBBF24" />
-    <path d="M14 24L26 30.5V42L14 35.5V24Z" fill="#D97706" />
-    <path d="M26 30.5L38 24V35.5L26 42V30.5Z" fill="#B45309" />
-    {/* Tape Line */}
-    <path d="M26 17.5L26 30.5" stroke="#78350F" strokeWidth="1.6" strokeDasharray="2.5 1.5" />
-    {/* Safe Plant emerging */}
-    <path d="M26 22V12" stroke="#2D6A4F" strokeWidth="2.4" strokeLinecap="round" />
-    <path d="M26 15C21 15 19 12 19 9C23 9 25 11 26 15Z" fill="#4ADE80" />
-    <path d="M26 12C31 12 33 9 33 6C29 6 27 8 26 12Z" fill="#15803D" />
-    {/* Verified Shield Badge */}
-    <circle cx="39" cy="36" r="8" fill="#10B981" />
-    <path d="M35.5 36L38 38.5L42.5 33.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    {/* A clear delivery van carrying a plant */}
+    <path d="M6.5 22H10M5.5 27H10" stroke="#F59E0B" strokeWidth="1.8" strokeLinecap="round" />
+    <path d="M11 16.5C11 15.7 11.7 15 12.5 15H30V34H11V16.5Z" fill="#4A7C29" />
+    <path d="M30 21H37.2C38 21 38.8 21.4 39.3 22.1L43.5 28V34H30V21Z" fill="#2D6A4F" />
+    <path d="M33 23.5H36.5L39.5 27.5H33V23.5Z" fill="#DBF3D2" />
+    <path d="M16 30V24" stroke="#EAF5E5" strokeWidth="1.6" strokeLinecap="round" />
+    <path d="M16 27C13.5 27 12.5 25.5 12.5 23.5C14.5 23.5 15.5 25 16 27Z" fill="#A7F3A0" />
+    <path d="M16 25C18.5 25 19.5 23.5 19.5 21.5C17.5 21.5 16.5 23 16 25Z" fill="#D1FA9A" />
+    <path d="M11 32H43" stroke="#183B1D" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="18" cy="35" r="3.5" fill="#183B1D" />
+    <circle cx="18" cy="35" r="1.4" fill="#F8FAF7" />
+    <circle cx="37" cy="35" r="3.5" fill="#183B1D" />
+    <circle cx="37" cy="35" r="1.4" fill="#F8FAF7" />
   </svg>
 );
 
@@ -341,29 +340,18 @@ const GardenCareIllustration = () => (
     className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 drop-shadow-xs"
     aria-hidden="true"
   >
-    {/* Soft Badge Background */}
-    <rect width="52" height="52" rx="14" fill="#E0F2FE" />
-    <circle cx="26" cy="26" r="21" stroke="#BAE6FD" strokeWidth="1" strokeDasharray="3 3" />
-    {/* Expert Speech Bubble */}
-    <path
-      d="M13 14C13 10.7 15.7 8 19 8H33C36.3 8 39 10.7 39 14V25C39 28.3 36.3 31 33 31H24L18 36V31H19C15.7 31 13 28.3 13 25V14Z"
-      fill="#0284C7"
-    />
-    {/* Plant Care Icon inside bubble */}
-    <path d="M26 25V16" stroke="#E0F2FE" strokeWidth="2.2" strokeLinecap="round" />
-    <path d="M26 21C22 21 20 18.5 20 15C23.5 15 25.5 17.5 26 21Z" fill="#86EFAC" />
-    <path d="M26 18C30 18 32 15.5 32 12C28.5 12 26.5 14.5 26 18Z" fill="#BBF7D0" />
-    {/* Care Heart Badge */}
-    <circle cx="16" cy="38" r="7" fill="#F43F5E" />
-    <path
-      d="M16 35.5C14.8 34.2 12.8 35 12.8 36.6C12.8 38.2 15.2 39.8 16 40.4C16.8 39.8 19.2 38.2 19.2 36.6C19.2 35 17.2 34.2 16 35.5Z"
-      fill="white"
-    />
-    {/* Water Droplet */}
-    <path
-      d="M38 34C38 32.2 40 29.5 40 29.5C40 29.5 42 32.2 42 34C42 35.1 41.1 36 40 36C38.9 36 38 35.1 38 34Z"
-      fill="#38BDF8"
-    />
+    <rect width="52" height="52" rx="14" fill="#EAF5E5" />
+    <circle cx="26" cy="26" r="21" stroke="#CDE7C2" strokeWidth="1" strokeDasharray="3 3" />
+    {/* The question bubble makes advice clear; the sprout ties it to gardening. */}
+    <path d="M8 13.5C8 10.5 10.5 8 13.5 8H30.5C33.5 8 36 10.5 36 13.5V24C36 27 33.5 29.5 30.5 29.5H22L15 35V29.5H13.5C10.5 29.5 8 27 8 24V13.5Z" fill="#2D6A4F" />
+    <path d="M21.8 20C21.8 17.8 24 17.5 24 15.7C24 14.5 23.1 13.7 21.7 13.7C20.5 13.7 19.6 14.3 19 15.3" stroke="white" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="21.8" cy="23.5" r="1.2" fill="white" />
+    {/* Seedling in a pot */}
+    <path d="M37 34V25" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" />
+    <path d="M37 30C32.5 30 30.5 27.5 30.5 24C34 24 36 26.5 37 30Z" fill="#52B788" />
+    <path d="M37 27C41.5 27 43.5 24.5 43.5 21C40 21 38 23.5 37 27Z" fill="#2D6A4F" />
+    <path d="M32 34H42L40.5 42H33.5L32 34Z" fill="#EA580C" />
+    <path d="M31 32.5H43C43.6 32.5 44 33 44 33.5C44 34.1 43.6 34.5 43 34.5H31C30.4 34.5 30 34.1 30 33.5C30 33 30.4 32.5 31 32.5Z" fill="#C2410C" />
   </svg>
 );
 
