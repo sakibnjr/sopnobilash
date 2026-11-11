@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import {
+  Banknote,
   Search,
   User,
   ShoppingCart,
@@ -40,7 +41,7 @@ import { Card } from "@/components/ui/card";
 
 const GOOGLE_MAPS_SHARE_URL = "https://share.google/KYsUA89T0ilh7GdqD";
 const GOOGLE_MAPS_EMBED_URL =
-  "https://www.google.com/maps?q=%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%AA%E0%A7%8D%E0%A6%A8+%E0%A6%AC%E0%A6%BF%E0%A6%B2%E0%A6%BE%E0%A6%B8+%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A6%BF+Swapna+Bilas+Nursery&output=embed";
+  "https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1s428H%2B6CR,+Joypurhat,+Bangladesh";
 const FACEBOOK_PAGE_URL =
   "https://www.facebook.com/p/%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%AA%E0%A7%8D%E0%A6%A8-%E0%A6%AC%E0%A6%BF%E0%A6%B2%E0%A6%BE%E0%A6%B8-%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A6%BF-100082633088405/";
 const WHATSAPP_URL = "https://wa.me/8801880803067";
@@ -1730,14 +1731,14 @@ export default function HomePage() {
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-0.5">
                         <a
                           href="tel:01880803067"
-                          className="text-[16.5px] font-bold text-[#132A13] hover:text-[#3A6B1F] transition-colors"
+                          className="text-[14px] sm:text-[16.5px] font-bold text-[#132A13] hover:text-[#3A6B1F] transition-colors"
                         >
                           ০১৮৮০-৮০৩০৬৭
                         </a>
                         <span className="text-gray-400">|</span>
                         <a
                           href="tel:01625409484"
-                          className="text-[16.5px] font-bold text-[#132A13] hover:text-[#3A6B1F] transition-colors"
+                          className="text-[14px] sm:text-[16.5px] font-bold text-[#132A13] hover:text-[#3A6B1F] transition-colors"
                         >
                           ০১৬২৫-৪০৯৪৮৪
                         </a>
@@ -1754,7 +1755,7 @@ export default function HomePage() {
                       <p className="text-[13.5px] text-[#525E50]">
                         নার্সারি লোকেশন (Google Maps Plus Code: 428H+6CR)
                       </p>
-                      <p className="text-[16px] font-bold text-[#132A13]">
+                      <p className="text-[14px] sm:text-[16px] font-bold text-[#132A13]">
                         জয়পুরহাট - হিলি হাইওয়ে, জয়পুরহাট সদর, জয়পুরহাট
                       </p>
                     </div>
@@ -1769,7 +1770,7 @@ export default function HomePage() {
                       <p className="text-[13.5px] text-[#525E50]">
                         সেবার সময়সূচী
                       </p>
-                      <p className="text-[16px] font-bold text-[#132A13]">
+                      <p className="text-[14px] sm:text-[16px] font-bold text-[#132A13]">
                         সপ্তাহে ৭ দিন খোলা (২৪ ঘণ্টা অনলাইন ও সরাসরি নার্সারি
                         সেবা)
                       </p>
@@ -1983,7 +1984,8 @@ export default function HomePage() {
               width="100%"
               height="380"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
               className="w-full h-[320px] sm:h-[380px] border-0 block"
             />
 
@@ -2240,15 +2242,28 @@ export default function HomePage() {
                 <p className="text-[12.5px] text-white/60 mb-2">
                   পেমেন্ট মাধ্যম:
                 </p>
-                <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="px-2.5 py-0.5 rounded bg-white/10 text-[12px] font-medium text-white">
-                    ক্যাশ অন ডেলিভারি
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex h-9 items-center gap-1.5 rounded bg-white/10 px-2.5 text-[12px] font-medium text-white">
+                    <Banknote className="h-4 w-4 text-[#8ED95B]" aria-hidden="true" />
+                    <span>ক্যাশ অন ডেলিভারি</span>
                   </span>
-                  <span className="px-2.5 py-0.5 rounded bg-[#E2136E]/25 border border-[#E2136E]/40 text-[12px] font-medium text-pink-200">
-                    বিকাশ
+                  <span className="inline-flex h-9 items-center justify-center rounded bg-white px-2 shadow-2xs">
+                    <Image
+                      src="/assets/payments/bkash.webp"
+                      alt="bKash"
+                      width={400}
+                      height={220}
+                      className="h-[28px] w-[52px] object-contain"
+                    />
                   </span>
-                  <span className="px-2.5 py-0.5 rounded bg-[#F7941D]/25 border border-[#F7941D]/40 text-[12px] font-medium text-orange-200">
-                    নগদ
+                  <span className="inline-flex h-9 items-center justify-center rounded bg-white px-2 shadow-2xs">
+                    <Image
+                      src="/assets/payments/nagad.webp"
+                      alt="Nagad"
+                      width={600}
+                      height={267}
+                      className="h-[27px] w-[60px] object-contain"
+                    />
                   </span>
                 </div>
               </div>
