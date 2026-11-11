@@ -995,7 +995,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 22 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
-                className="relative z-10 max-w-[560px] md:max-w-[580px] lg:max-w-[620px] xl:max-w-[660px] -mt-7 sm:mt-0 bg-white sm:bg-transparent rounded-2xl sm:rounded-none shadow-md sm:shadow-none p-3.5 min-[380px]:p-4 sm:p-0 shrink-0"
+                className="relative z-10 max-w-[560px] md:max-w-[580px] lg:max-w-[620px] xl:max-w-[660px] -mt-7 sm:mt-0 bg-white sm:bg-transparent rounded-2xl sm:rounded-none shadow-md sm:shadow-none p-3.5 min-[380px]:p-4 sm:p-0 shrink-0 text-center sm:text-left"
               >
                 {/* Top Pill Badge */}
                 <motion.div
