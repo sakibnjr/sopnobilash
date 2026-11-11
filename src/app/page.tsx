@@ -821,7 +821,9 @@ export default function HomePage() {
             <button
               type="button"
               aria-label="মেনু"
-              onClick={() => setIsMobileMenuOpen(true)}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation-drawer"
+              onClick={() => setIsMobileMenuOpen((open) => !open)}
               className="md:hidden text-[#1F2937] hover:text-[#3A6B1F] p-1.5 cursor-pointer rounded-lg hover:bg-gray-100/60 transition-colors"
             >
               <Menu className="w-6 h-6" />
@@ -829,108 +831,114 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer (Right Side, Full Height, Smooth Slide Animation) */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-2xs md:hidden"
-            >
-              <motion.div
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ type: "spring", damping: 30, stiffness: 320 }}
-                onClick={(e) => e.stopPropagation()}
-                className="w-[84vw] max-w-[340px] bg-white h-full shadow-2xl flex flex-col justify-between p-5 overflow-y-auto"
-              >
-                {/* Drawer Top Header */}
-                <div>
-                  <div className="flex items-center justify-between pb-4 border-b border-gray-100">
-                    <a
-                      href="#home"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center shrink-0"
-                    >
-                      <Image
-                        src="/assets/logo.webp"
-                        alt="স্বপ্ন বিলাস নার্সারি"
-                        width={140}
-                        height={55}
-                        className="h-9 w-auto object-contain"
-                      />
-                    </a>
-                    <button
-                      type="button"
-                      aria-label="মেনু বন্ধ করুন"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="p-1.5 rounded-xl text-gray-500 hover:text-[#132A13] hover:bg-[#EFF5EC] transition-colors cursor-pointer"
-                    >
-                      <X className="w-5 h-5 stroke-[2.2]" />
-                    </button>
-                  </div>
-
-                  {/* Navigation Links */}
-                  <nav className="mt-5 space-y-1.5">
-                    {NAV_LINKS.map((item) => {
-                      const isActive = activeNav === item.label;
-                      return (
-                        <a
-                          key={item.label}
-                          href={item.href}
-                          onClick={() => {
-                            setActiveNav(item.label);
-                            setIsMobileMenuOpen(false);
-                          }}
-                          className={`flex items-center justify-between py-3 px-3.5 rounded-xl text-[16px] transition-all ${
-                            isActive
-                              ? "bg-[#EFF5EC] text-[#3A6B1F] font-bold shadow-2xs"
-                              : "text-[#1F2937] hover:bg-[#F8FAF7] hover:text-[#3A6B1F] font-medium"
-                          }`}
-                        >
-                          <span>{item.label}</span>
-                          {isActive && (
-                            <span className="w-2 h-2 rounded-full bg-[#3A6B1F]" />
-                          )}
-                        </a>
-                      );
-                    })}
-                  </nav>
-                </div>
-
-                {/* Drawer Bottom Actions & Contacts */}
-                <div className="pt-6 border-t border-gray-100 space-y-2.5">
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#25D366] text-white font-semibold text-[14px] shadow-2xs hover:bg-[#20BA5A] transition-colors"
-                  >
-                    <MessageCircle className="w-4 h-4 fill-current" />
-                    <span>হোয়াটসঅ্যাপে মেসেজ পাঠান</span>
-                  </a>
-
-                  <a
-                    href="tel:01880803067"
-                    className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-[#3A6B1F]/30 text-[#255C16] font-semibold text-[14px] hover:bg-[#EFF5EC] transition-colors"
-                  >
-                    <Phone className="w-4 h-4 text-[#3A6B1F]" />
-                    <span>কল: ০১৮৮০-৮০৩০৬৭</span>
-                  </a>
-
-                  <p className="text-center text-[12px] text-gray-400 pt-1">
-                    জয়পুরহাট সদর • সারা দেশে নিরাপদ ডেলিভারি
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </header>
+
+      {/* Keep the drawer outside the blurred sticky header so its fixed layer
+          covers the viewport on mobile browsers. */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="fixed inset-0 z-[60] flex justify-end bg-black/50 backdrop-blur-2xs md:hidden"
+          >
+            <motion.div
+              id="mobile-navigation-drawer"
+              role="dialog"
+              aria-modal="true"
+              aria-label="মোবাইল নেভিগেশন"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 30, stiffness: 320 }}
+              onClick={(e) => e.stopPropagation()}
+              className="w-[84vw] max-w-[340px] bg-white h-full shadow-2xl flex flex-col justify-between p-5 overflow-y-auto"
+            >
+              {/* Drawer Top Header */}
+              <div>
+                <div className="flex items-center justify-between pb-4 border-b border-gray-100">
+                  <a
+                    href="#home"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center shrink-0"
+                  >
+                    <Image
+                      src="/assets/logo.webp"
+                      alt="স্বপ্ন বিলাস নার্সারি"
+                      width={140}
+                      height={55}
+                      className="h-9 w-auto object-contain"
+                    />
+                  </a>
+                  <button
+                    type="button"
+                    aria-label="মেনু বন্ধ করুন"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-1.5 rounded-xl text-gray-500 hover:text-[#132A13] hover:bg-[#EFF5EC] transition-colors cursor-pointer"
+                  >
+                    <X className="w-5 h-5 stroke-[2.2]" />
+                  </button>
+                </div>
+
+                {/* Navigation Links */}
+                <nav className="mt-5 space-y-1.5">
+                  {NAV_LINKS.map((item) => {
+                    const isActive = activeNav === item.label;
+                    return (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        onClick={() => {
+                          setActiveNav(item.label);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={`flex items-center justify-between py-3 px-3.5 rounded-xl text-[16px] transition-all ${
+                          isActive
+                            ? "bg-[#EFF5EC] text-[#3A6B1F] font-bold shadow-2xs"
+                            : "text-[#1F2937] hover:bg-[#F8FAF7] hover:text-[#3A6B1F] font-medium"
+                        }`}
+                      >
+                        <span>{item.label}</span>
+                        {isActive && (
+                          <span className="w-2 h-2 rounded-full bg-[#3A6B1F]" />
+                        )}
+                      </a>
+                    );
+                  })}
+                </nav>
+              </div>
+
+              {/* Drawer Bottom Actions & Contacts */}
+              <div className="pt-6 border-t border-gray-100 space-y-2.5">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#25D366] text-white font-semibold text-[14px] shadow-2xs hover:bg-[#20BA5A] transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <span>হোয়াটসঅ্যাপে মেসেজ পাঠান</span>
+                </a>
+
+                <a
+                  href="tel:01880803067"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-[#3A6B1F]/30 text-[#255C16] font-semibold text-[14px] hover:bg-[#EFF5EC] transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-[#3A6B1F]" />
+                  <span>কল: ০১৮৮০-৮০৩০৬৭</span>
+                </a>
+
+                <p className="text-center text-[12px] text-gray-400 pt-1">
+                  জয়পুরহাট সদর • সারা দেশে নিরাপদ ডেলিভারি
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Main Content */}
       <main>
