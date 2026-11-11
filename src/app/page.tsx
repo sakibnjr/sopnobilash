@@ -946,7 +946,7 @@ export default function HomePage() {
         <section
           className={`${CONTAINER_CLASS} flex flex-col pt-3 sm:pt-4 lg:pt-6`}
         >
-          <div className="relative w-full h-[640px] sm:h-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#F5F8F2] flex flex-col justify-between sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] xl:min-h-[620px]">
+          <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-[#F5F8F2] flex flex-col justify-between sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] xl:min-h-[620px]">
             {/* Background Hero Artwork on Desktop/Tablet */}
             <Image
               src="/assets/hero-bg.webp"
@@ -958,7 +958,7 @@ export default function HomePage() {
             />
 
             {/* Foreground Hero Content */}
-            <div className="relative z-10 flex flex-col justify-between h-full px-4 sm:px-8 lg:px-12 xl:px-14 pt-6 sm:pt-0 pb-4 sm:pb-0 sm:justify-center sm:gap-16 lg:gap-20 sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] xl:min-h-[620px]">
+            <div className="relative z-10 flex flex-col justify-between h-auto sm:h-full px-4 sm:px-8 lg:px-12 xl:px-14 pt-6 sm:pt-0 pb-4 sm:pb-0 sm:justify-center sm:gap-16 lg:gap-20 sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] xl:min-h-[620px]">
               {/* Mobile: edge-to-edge hero image on top with floating chips (proportional flex height) */}
               <div className="sm:hidden relative -mx-4 -mt-6 h-[clamp(180px,60vw,235px)] rounded-b-[2rem] overflow-hidden">
                 <Image
@@ -1154,8 +1154,8 @@ export default function HomePage() {
         <section id="why-us" className={`${CONTAINER_CLASS} py-6`}>
           <div className="w-full rounded-3xl bg-[#EFF5EC] border border-[#DCE7D4] overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch">
             {/* Left Text Content — Centered & Seamless Full Width Cards */}
-            <div className="lg:col-span-5 px-2 py-6 sm:px-4 sm:py-8 lg:px-7 lg:py-10 flex flex-col items-start justify-center text-left">
-              <div className="flex items-center justify-start gap-2 sm:gap-2.5">
+            <div className="lg:col-span-5 px-2 py-6 sm:px-4 sm:py-8 lg:px-7 lg:py-10 flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-2.5">
                 {/* Left decorative leaf */}
                 <motion.svg
                   initial={{ rotate: -25, opacity: 0 }}
@@ -1205,7 +1205,7 @@ export default function HomePage() {
                 </motion.svg>
               </div>
 
-              <p className="mt-2 text-[#374151] text-[15px] lg:text-[17px] leading-[1.6] text-left max-w-[420px]">
+              <p className="mt-2 text-[#374151] text-[15px] lg:text-[17px] leading-[1.6] text-center lg:text-left max-w-[420px]">
                 মানসম্মত গাছ, যত্নশীল সেবা এবং
                 <br />
                 বিশ্বস্ত ডেলিভারি—সবকিছু এক জায়গায়।
@@ -1706,10 +1706,10 @@ export default function HomePage() {
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
                 className="lg:col-span-5 space-y-4 sm:space-y-5 lg:self-center"
               >
-                <h3 className="text-[18px] min-[380px]:text-[19px] sm:text-[22px] font-bold text-[#132A13] leading-snug">
+                <h3 className="text-[18px] min-[380px]:text-[19px] sm:text-[22px] font-bold text-[#132A13] leading-snug text-center lg:text-left">
                   স্বপ্ন বিলাস নার্সারি (Swapna Bilas Nursery)
                 </h3>
-                <p className="text-[#374151] text-[15px] sm:text-[16px] leading-relaxed">
+                <p className="text-[#374151] text-[15px] sm:text-[16px] leading-relaxed text-center lg:text-left">
                   <strong>
                     “ছাত্র, শখের বাগানি, উদ্যোক্তা ও অনলাইন সেলার ❤️🥀”
                   </strong>{" "}
