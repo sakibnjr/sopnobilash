@@ -74,37 +74,37 @@ const CATEGORIES: CategoryItem[] = [
     id: "bougainvillea",
     name: "বাগান বিলাস",
     count: "৪৫+ প্রজাতি",
-    image: "/assets/categories/bougainvillea-full.png",
+    image: "/assets/categories/bougainvillea-full.webp",
   },
   {
     id: "flower",
     name: "ফুলের গাছ",
     count: "৬০+ প্রজাতি",
-    image: "/assets/categories/hibiscus-full.png",
+    image: "/assets/categories/hibiscus-full.webp",
   },
   {
     id: "fruit",
     name: "ফল গাছ",
     count: "৩০+ প্রজাতি",
-    image: "/assets/categories/mango-full.png",
+    image: "/assets/categories/mango-full.webp",
   },
   {
     id: "ornamental",
     name: "সাজসজ্জার গাছ",
     count: "৫০+ প্রজাতি",
-    image: "/assets/categories/houseplant-full.png",
+    image: "/assets/categories/houseplant-full.webp",
   },
   {
     id: "indoor",
     name: "ইনডোর প্ল্যান্ট",
     count: "২৫+ প্রজাতি",
-    image: "/assets/categories/snakeplant-full.png",
+    image: "/assets/categories/snakeplant-full.webp",
   },
   {
     id: "seedling",
     name: "চারা ও কাটিং",
     count: "২০+ প্রজাতি",
-    image: "/assets/categories/seedling-full.png",
+    image: "/assets/categories/seedling-full.webp",
   },
 ];
 
@@ -114,7 +114,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (গোলাপি)",
     price: 350,
     priceDisplay: "৳ 350",
-    image: "/assets/varients/magenta.jpeg",
+    image: "/assets/varients/magenta.webp",
     category: "bougainvillea",
     tag: "বেস্টসেলার",
   },
@@ -123,7 +123,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (সাদা)",
     price: 350,
     priceDisplay: "৳ 350",
-    image: "/assets/varients/white.jpeg",
+    image: "/assets/varients/white.webp",
     category: "bougainvillea",
     tag: "জনপ্রিয়",
   },
@@ -132,7 +132,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (কমলা)",
     price: 380,
     priceDisplay: "৳ 380",
-    image: "/assets/varients/orange.jpeg",
+    image: "/assets/varients/orange.webp",
     category: "bougainvillea",
     tag: "বিরল রঙ",
   },
@@ -141,7 +141,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (ভ্যারিগেটেড)",
     price: 450,
     priceDisplay: "৳ 450",
-    image: "/assets/varients/pink-white.jpeg",
+    image: "/assets/varients/pink-white.webp",
     category: "bougainvillea",
     tag: "প্রিমিয়াম",
   },
@@ -150,7 +150,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (হলুদ)",
     price: 390,
     priceDisplay: "৳ 390",
-    image: "/assets/varients/yellow.jpeg",
+    image: "/assets/varients/yellow.webp",
     category: "bougainvillea",
   },
   {
@@ -158,7 +158,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (উজ্জ্বল লাল)",
     price: 400,
     priceDisplay: "৳ 400",
-    image: "/assets/varients/scarlet-red.jpeg",
+    image: "/assets/varients/scarlet-red.webp",
     category: "bougainvillea",
   },
   {
@@ -166,7 +166,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (বেগুনি)",
     price: 380,
     priceDisplay: "৳ 380",
-    image: "/assets/varients/violet.jpeg",
+    image: "/assets/varients/violet.webp",
     category: "bougainvillea",
   },
   {
@@ -174,7 +174,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (পিচ)",
     price: 420,
     priceDisplay: "৳ 420",
-    image: "/assets/varients/peach.jpeg",
+    image: "/assets/varients/peach.webp",
     category: "bougainvillea",
   },
   {
@@ -182,7 +182,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (সাদা-ম্যাজেন্টা)",
     price: 450,
     priceDisplay: "৳ 450",
-    image: "/assets/varients/white-magenta.jpeg",
+    image: "/assets/varients/white-magenta.webp",
     category: "bougainvillea",
   },
   {
@@ -190,7 +190,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (কোরাল কমলা)",
     price: 390,
     priceDisplay: "৳ 390",
-    image: "/assets/varients/coral-orange.jpeg",
+    image: "/assets/varients/coral-orange.webp",
     category: "bougainvillea",
   },
   {
@@ -198,7 +198,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (গাঢ় লাল)",
     price: 400,
     priceDisplay: "৳ 400",
-    image: "/assets/varients/crimson-red.jpeg",
+    image: "/assets/varients/crimson-red.webp",
     category: "bougainvillea",
   },
   {
@@ -206,7 +206,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (ব্লাশ পিঙ্ক)",
     price: 360,
     priceDisplay: "৳ 360",
-    image: "/assets/varients/blush-pink.jpeg",
+    image: "/assets/varients/blush-pink.webp",
     category: "bougainvillea",
   },
   {
@@ -214,7 +214,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (ফুশিয়া)",
     price: 370,
     priceDisplay: "৳ 370",
-    image: "/assets/varients/fuchsia.jpeg",
+    image: "/assets/varients/fuchsia.webp",
     category: "bougainvillea",
   },
   {
@@ -222,7 +222,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (হালকা গোলাপি)",
     price: 350,
     priceDisplay: "৳ 350",
-    image: "/assets/varients/light-pink.jpeg",
+    image: "/assets/varients/light-pink.webp",
     category: "bougainvillea",
   },
   {
@@ -230,7 +230,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (পার্পল পিঙ্ক)",
     price: 380,
     priceDisplay: "৳ 380",
-    image: "/assets/varients/purple-pink.jpeg",
+    image: "/assets/varients/purple-pink.webp",
     category: "bougainvillea",
   },
   {
@@ -238,7 +238,7 @@ const POPULAR_PLANTS: PlantProduct[] = [
     name: "বাগান বিলাস (রোজ পিঙ্ক)",
     price: 370,
     priceDisplay: "৳ 370",
-    image: "/assets/varients/rose-pink.jpeg",
+    image: "/assets/varients/rose-pink.webp",
     category: "bougainvillea",
   },
 ];
@@ -748,7 +748,7 @@ export default function HomePage() {
             className="flex items-center shrink-0 focus:outline-none"
           >
             <Image
-              src="/assets/logo.png"
+              src="/assets/logo.webp"
               alt="স্বপ্ন বিলাস নার্সারি - Swapna Bilas Nursery"
               width={195}
               height={80}
@@ -857,7 +857,7 @@ export default function HomePage() {
                       className="flex items-center shrink-0"
                     >
                       <Image
-                        src="/assets/logo.png"
+                        src="/assets/logo.webp"
                         alt="স্বপ্ন বিলাস নার্সারি"
                         width={140}
                         height={55}
@@ -938,10 +938,10 @@ export default function HomePage() {
         <section
           className={`${CONTAINER_CLASS} flex flex-col pt-3 sm:pt-4 lg:pt-6`}
         >
-          <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-[#F5F8F2] flex flex-col justify-between sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] xl:min-h-[620px]">
+          <div className="relative w-full h-[640px] sm:h-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#F5F8F2] flex flex-col justify-between sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] xl:min-h-[620px]">
             {/* Background Hero Artwork on Desktop/Tablet */}
             <Image
-              src="/assets/hero-bg.png"
+              src="/assets/hero-bg.webp"
               alt="বাগান বিলাস ফুল ও গাছের সমাহার"
               fill
               priority
@@ -952,9 +952,9 @@ export default function HomePage() {
             {/* Foreground Hero Content */}
             <div className="relative z-10 flex flex-col justify-between h-full px-4 sm:px-8 lg:px-12 xl:px-14 pt-6 sm:pt-0 pb-4 sm:pb-0 sm:justify-center sm:gap-16 lg:gap-20 sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] xl:min-h-[620px]">
               {/* Mobile: edge-to-edge hero image on top with floating chips (proportional flex height) */}
-              <div className="sm:hidden relative -mx-4 -mt-6 h-[210px] min-[380px]:h-[235px] rounded-b-[2rem] overflow-hidden">
+              <div className="sm:hidden relative -mx-4 -mt-6 h-[clamp(180px,60vw,235px)] rounded-b-[2rem] overflow-hidden">
                 <Image
-                  src="/assets/Hero.jpeg"
+                  src="/assets/Hero.webp"
                   alt="বাগান বিলাস"
                   fill
                   priority
@@ -1285,7 +1285,7 @@ export default function HomePage() {
               {/* High-Res Nursery Photo Flush Top/Bottom/Right with Slanted Left Edge on Desktop */}
               <div className="absolute inset-0 w-full h-full lg:[clip-path:polygon(18%_0%,100%_0%,100%_100%,8%_100%)]">
                 <Image
-                  src="/assets/Why-choose-us.png"
+                  src="/assets/Why-choose-us.webp"
                   alt="স্বপ্ন বিলাস নার্সারি"
                   fill
                   sizes="(max-width: 1024px) 100vw, 860px"
@@ -2004,7 +2004,7 @@ export default function HomePage() {
             className="w-full relative rounded-3xl overflow-hidden min-h-[195px] sm:min-h-[220px] lg:min-h-[250px] flex items-center shadow-xs bg-[#14330F]"
           >
             <Image
-              src="/assets/cta-banner-bg.png"
+              src="/assets/cta-banner-bg.webp"
               alt="আপনার স্বপ্নের বাগান গড়তে আজই অর্ডার করুন"
               fill
               sizes="(max-width: 1480px) 100vw, 1384px"
@@ -2050,7 +2050,7 @@ export default function HomePage() {
             <div className="lg:col-span-4 space-y-3.5">
               <a href="#home" className="inline-block focus:outline-none">
                 <Image
-                  src="/assets/logo-footer.png"
+                  src="/assets/logo-footer.webp"
                   alt="স্বপ্ন বিলাস নার্সারি"
                   width={210}
                   height={84}
